@@ -53,7 +53,7 @@ public class HomePageValidations extends TestBase {
         homePage.validateURLForSearchButton();
     }
 
-    @Test(dataProviderClass = DataProviders.class, dataProvider = "searchData", enabled = true)
+    @Test(dataProviderClass = DataProviders.class, dataProvider = "searchData", enabled = false)
     public void validateUserBeingAbleToSearchForMultipleItems(String data) {
         homePage.typeMultipleDataOnSearchBar(data);
         homePage.clickOnSearchButton();

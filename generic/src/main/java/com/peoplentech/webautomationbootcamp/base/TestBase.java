@@ -68,6 +68,7 @@ public class TestBase {
         return driver;
     }
 
+
     /**
      * @param browser  the browser you want to execute your test case
      * @param platform in the operating system you want to execute your test case
