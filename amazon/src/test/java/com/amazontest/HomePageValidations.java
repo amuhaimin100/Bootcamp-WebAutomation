@@ -12,9 +12,9 @@ public class HomePageValidations extends TestBase {
     private HomePage homePage;
 
     @BeforeMethod
-    public void setupPageFactory(){
+    public void setupPageFactory() {
 
-        homePage= PageFactory.initElements(driver,HomePage.class);
+        homePage = PageFactory.initElements(driver, HomePage.class);
     }
 
     @Test(enabled = false)
@@ -83,8 +83,6 @@ public class HomePageValidations extends TestBase {
         homePage.clickOnVideoGamesButton();
         homePage.validateVideoGamesPage();
     }
-
-
 
 
 }
