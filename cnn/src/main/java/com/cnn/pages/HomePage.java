@@ -139,7 +139,7 @@ public class HomePage extends TestBase {
 
     public void scrollDownToSearchBarThenTypeOnSearchBarAndClickSearchButton() {
 
-        JavascriptExecutor js = (JavascriptExecutor) TestBase.driver;
+        JavascriptExecutor js = (JavascriptExecutor)driver;
 
         js.executeScript("arguments[0].scrollIntoView(true);", searchBar);
         ExtentTestManager.log("The page scrolled down to searchbar");
@@ -157,7 +157,7 @@ public class HomePage extends TestBase {
     }
 
     public void clickOnEntertainmentNews() {
-        JavascriptExecutor js = (JavascriptExecutor) TestBase.driver;
+        JavascriptExecutor js = (JavascriptExecutor)driver;
 
         js.executeScript("arguments[0].scrollIntoView(true);", entertainmentButton);
         ExtentTestManager.log("The page scrolled down to Entertainment");
@@ -175,7 +175,7 @@ public class HomePage extends TestBase {
     }
 
     public void scrollDownToTheBottomOfThePage() {
-        JavascriptExecutor js = (JavascriptExecutor) TestBase.driver;
+        JavascriptExecutor js = (JavascriptExecutor) driver;
 
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         ExtentTestManager.log("Scroll Down to the bottom of the page");

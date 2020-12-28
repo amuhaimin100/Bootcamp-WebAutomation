@@ -13,6 +13,7 @@
         <module>amazon</module>
         <module>facebook</module>
         <module>cnn</module>
+        <module>cigna</module>
     </modules>
 
     <properties>
