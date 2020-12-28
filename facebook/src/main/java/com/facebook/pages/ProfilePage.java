@@ -15,7 +15,7 @@ public class ProfilePage extends TestBase {
     @FindBy(xpath = "//div[@xpath='1']")
     private WebElement likeButton;
 
-    @FindBy(xpath = "span[@xpath='1']")
+    @FindBy(xpath = "//span[@xpath='1']")
     private WebElement thumbsUpSign;
 
     @FindBy(xpath = "//div[@aria-label= 'Write a comment']")

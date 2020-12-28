@@ -21,12 +21,20 @@ public class HomePage extends TestBase {
     @FindBy(xpath = "//span[text()='News']")
     private WebElement newsButton;
 
+    @FindBy(xpath = "//a[@aria-label= 'Friends']")
+    private WebElement friendsTab;
+
     public static void validateHomePageURL() {
         String actualURL = driver.getCurrentUrl();
         String expectedURL = "https://www.facebook.com/?sk=welcome";
 
         Assert.assertTrue(actualURL.contains(expectedURL));
         ExtentTestManager.log("Validated URL for the Homepage " + actualURL);
+    }
+
+    public void clickOnFriendsTab() {
+        friendsTab.click();
+
     }
 
     public void searchForChandlerBing() {

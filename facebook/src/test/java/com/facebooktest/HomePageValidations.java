@@ -32,4 +32,12 @@ public class HomePageValidations extends TestBase {
         homePage.clickOnNews();
         homePage.validateURLForNews();
     }
+
+    @Test(enabled = false)
+    public void validateUserIsAbleToNavigateToFriendsPageFromHomePage() {
+        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+        homePage.clickOnFriendsTab();
+        sleepFor(3);
+
+    }
 }
