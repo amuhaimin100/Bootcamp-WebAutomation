@@ -14,7 +14,7 @@ public class FriendsPageValidations extends TestBase {
         landingPageValidations.validateUserIsAbleToSignInUsingTheCorrectUserNameAndPassword();
     }
 
-    @Test
+    @Test(enabled = false)
     public void validateUserIsAbleToAcceptFriendRequest() {
         HomePageValidations homePageValidations = PageFactory.initElements(driver, HomePageValidations.class);
         FriendsPage friendsPage = PageFactory.initElements(driver, FriendsPage.class);

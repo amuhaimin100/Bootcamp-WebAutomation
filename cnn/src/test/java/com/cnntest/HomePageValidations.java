@@ -40,5 +40,39 @@ public class HomePageValidations extends TestBase {
         homePage.validateURLForNewsPage();
     }
 
+    @Test(enabled = false)
+    public void validateUserIsAbleToSearchForNews() {
+        homePage.scrollDownToSearchBarThenTypeOnSearchBarAndClickSearchButton();
+        homePage.validateHeaderForSearchResults();
+    }
+
+    @Test(enabled = false)
+    public void validateUserIsAbleToScrollDownToEntertainmentAndClickOnEntertainmentNews() {
+        homePage.clickOnEntertainmentNews();
+        homePage.validateURLForEntertainment();
+    }
+
+    @Test(enabled = false)
+    public void validateUserIsAbleToScrollToBottomOfThePageAndClickOnPhotos() {
+        homePage.scrollDownToTheBottomOfThePage();
+        homePage.clickOnPhotos();
+        homePage.validateURLForPhotos();
+    }
+
+    @Test(enabled = false)
+    public void validateUserIsAbleToClickOnTheCNNLogoToReturnToHomePage() {
+        homePage.scrollDownToTheBottomOfThePage();
+        homePage.clickOnPhotos();
+        homePage.validateURLForPhotos();
+        homePage.clickOnCNNLogo();
+        homePage.validateURLForCNN();
+    }
+
+    @Test(enabled = false)
+    public void validateUserIsAbleToLogOutAfterLoggingIn() {
+        validateUserIsAbleToClickOnAccountButtonAndLogIn();
+        homePage.clickOnAccountButton();
+        homePage.clickOnLogOut();
+    }
 
 }
