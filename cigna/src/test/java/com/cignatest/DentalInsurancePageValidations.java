@@ -9,9 +9,9 @@ import org.testng.annotations.Test;
 public class DentalInsurancePageValidations extends TestBase {
 
     @Test(enabled = false)
-    public void validateUserIsAbleToSelectCignaDentalPreventiveFromTheDentalInsurancePage(){
-        HomePage homePage= PageFactory.initElements(driver,HomePage.class);
-        DentalInsurancePage dentalInsurancePage= PageFactory.initElements(driver, DentalInsurancePage.class);
+    public void validateUserIsAbleToSelectCignaDentalPreventiveFromTheDentalInsurancePage() {
+        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+        DentalInsurancePage dentalInsurancePage = PageFactory.initElements(driver, DentalInsurancePage.class);
 
         homePage.hoverOverIndividualsAndFamilies();
         homePage.clickOnPlansAndServices();
@@ -23,9 +23,9 @@ public class DentalInsurancePageValidations extends TestBase {
     }
 
     @Test(enabled = false)
-    public void validateUserIsAbleToScrollDownToDentalCareForSeniorsAndClick(){
-        HomePage homePage= PageFactory.initElements(driver,HomePage.class);
-        DentalInsurancePage dentalInsurancePage= PageFactory.initElements(driver, DentalInsurancePage.class);
+    public void validateUserIsAbleToScrollDownToDentalCareForSeniorsAndClick() {
+        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+        DentalInsurancePage dentalInsurancePage = PageFactory.initElements(driver, DentalInsurancePage.class);
 
         homePage.hoverOverIndividualsAndFamilies();
         homePage.clickOnPlansAndServices();

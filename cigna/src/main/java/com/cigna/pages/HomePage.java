@@ -126,8 +126,8 @@ public class HomePage extends TestBase {
     }
 
     public void validateURLForCustomerRights() {
-        String actualURL= driver.getCurrentUrl();
-        String expectedURL= "https://www.cigna.com/memberrightsandresponsibilities";
+        String actualURL = driver.getCurrentUrl();
+        String expectedURL = "https://www.cigna.com/memberrightsandresponsibilities";
 
         Assert.assertTrue(actualURL.contains(expectedURL));
         ExtentTestManager.log("Validated URL for customer rights page");

@@ -6,10 +6,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.LogStatus;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -28,6 +25,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Iterator;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 
@@ -153,6 +152,27 @@ public class TestBase {
         } catch (Exception e) {
             System.out.println("Exception while taking screenshot " + e.getMessage());
         }
+    }
+
+    // Alert Handling Method
+    public Alert alertHandler() {
+        Alert alert = driver.switchTo().alert();
+        return alert;
+    }
+
+    //Cookies Handling
+    public WebDriver.Options cookiesHandler() {
+        WebDriver.Options cookie = driver.manage();
+        return cookie;
+    }
+
+    //Popup window Handling
+    public void switchToChildWindow() {
+        Set<String> handler = driver.getWindowHandles();
+        Iterator<String> it = handler.iterator();
+        String parentWindow = it.next();
+        String childWindow = it.next();
+        driver.switchTo().window(childWindow);
     }
 
     //reporting starts

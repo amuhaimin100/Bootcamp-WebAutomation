@@ -46,7 +46,7 @@ public class HomePageValidations extends TestBase {
 
     @Test(enabled = false)
     public void validateUserIsAbleToSelectDentalInsuranceFromPlansAndServices() {
-        DentalInsurancePage dentalInsurancePage= PageFactory.initElements(driver, DentalInsurancePage.class);
+        DentalInsurancePage dentalInsurancePage = PageFactory.initElements(driver, DentalInsurancePage.class);
 
         homePage.hoverOverIndividualsAndFamilies();
         homePage.clickOnPlansAndServices();
@@ -55,13 +55,13 @@ public class HomePageValidations extends TestBase {
     }
 
     @Test(enabled = false)
-    public void validateUserIsAbleToSearchForMedicalToolsFromTheHomePage(){
+    public void validateUserIsAbleToSearchForMedicalToolsFromTheHomePage() {
         homePage.typeOnSearchBar();
         homePage.validateSearchResultsHeader();
     }
 
     @Test(enabled = false)
-    public void validateUserIsAbleToScrollToTheBottomOfThePageAndClickOnCustomerRights(){
+    public void validateUserIsAbleToScrollToTheBottomOfThePageAndClickOnCustomerRights() {
         homePage.scrollToTheEndOfThePage();
         homePage.clickOnCustomerRightsLink();
         homePage.validateURLForCustomerRights();

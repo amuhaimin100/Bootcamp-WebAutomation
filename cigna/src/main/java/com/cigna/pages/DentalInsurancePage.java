@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
 public class DentalInsurancePage extends TestBase {
-    @FindBy (xpath = "//span[text()= 'Dental Plans']")
+    @FindBy(xpath = "//span[text()= 'Dental Plans']")
     private WebElement dentalPlanHeader;
 
     @FindBy(linkText = "Cigna Dental Preventive**")
@@ -23,7 +23,7 @@ public class DentalInsurancePage extends TestBase {
     @FindBy(xpath = "//span[text()='Dental Care for Seniors']")
     private WebElement headerForDentalCareForSeniorsPage;
 
-    public void validateHeaderIsDisplayedOnTheDentalPlanPage(){
+    public void validateHeaderIsDisplayedOnTheDentalPlanPage() {
         Assert.assertTrue(dentalPlanHeader.isDisplayed());
         ExtentTestManager.log("Validated header Dental Plans is displayed on the Dental insurance page");
     }
@@ -40,13 +40,13 @@ public class DentalInsurancePage extends TestBase {
     }
 
     public void scrollDownToDentalCareForSeniors() {
-        JavascriptExecutor js = (JavascriptExecutor)driver;
+        JavascriptExecutor js = (JavascriptExecutor) driver;
 
         js.executeScript("arguments[0].scrollIntoView(true);", dentalCareForSeniorsButton);
         ExtentTestManager.log("The page scrolled down to Dental Care for Seniors");
     }
 
-    public void clickOnDentalCareForSeniorsButton(){
+    public void clickOnDentalCareForSeniorsButton() {
         dentalCareForSeniorsButton.click();
         ExtentTestManager.log("Clicked on dental care for seniors button");
     }
