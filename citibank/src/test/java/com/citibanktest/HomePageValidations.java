@@ -51,5 +51,17 @@ public class HomePageValidations extends TestBase {
         citigoldPage.validateURLForCitigoldPage();
     }
 
+    @Test(enabled = false)
+    public void validateUserIsAbleToScrollDownToCareerAndClickOnCareerLink() {
+        homePage.scrollToCareer();
+        homePage.clickOnCareerLink();
+        homePage.validatedURLForCareerPage();
+    }
 
+    @Test(enabled = false)
+    public void validateUserIsAbleToClickOnSearchIconAndSearchForProducts() {
+        homePage.clickOnSearchIcon();
+        homePage.typeOnSearchBarAndHitEnter();
+        homePage.validateSearchResultPageHeader();
+    }
 }
